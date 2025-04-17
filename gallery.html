@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+         
+        body {
+            background-image: url('bg2.jpg ');  
+            background-size: cover;  
+            background-position: center;  
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: white;  
+        }
+
+         
+        .heading-box {
+            background-color: rgba(0, 0, 0, 0.6);  
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            width: fit-content;
+            margin: 50px auto;  
+        }
+
+        
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);  
+            margin: 0;  
+            position: relative;
+            display: inline-block;
+        }
+
+        
+        h1 {
+            background: linear-gradient(to left, #ff7e5f, #feb47b);  
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+         
+        h1::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: #ff7e5f;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        h1:hover::after {
+            transform: scaleX(1); 
+        }
+
+         
+        h1:hover {
+            text-shadow: 0 0 10px rgba(255, 123, 95, 0.7), 0 0 20px rgba(255, 123, 95, 0.6);  
+        }
+
+         
+        .nav-links {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 18px;
+            margin: 15px;
+            color: white;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #ff5733;
+            color: white;
+        }
+
+         
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+     
+    <div class="heading-box">
+        <h1>Welcome To Photo Gallery</h1>
+    </div>
+
+     
+    <div class="nav-links">
+        <a href="pfwithcss.htm">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+    <br>
+
+     
+    <div class="gallery">
+        <img src="Javi Benítez (@j4vibenitez) on X.jpg" alt="Stevie G">
+        <img src="ZI9.jpg" alt="Liverpool Moment">
+        <img src="Mo Salah.jpg" alt="Mo Salah">
+        <img src="download.jpg" alt="Liverpool Player">
+        <img src="download (2).jpg" alt="Mo Salah">
+        <img src="download (1).jpg" alt="Liverpool Celebration">
+    </div>
+</body>
+</html>
